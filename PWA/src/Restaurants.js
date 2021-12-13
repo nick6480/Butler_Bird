@@ -55,7 +55,7 @@ function Restaurants({fetchUrl}) {
                     <div><h4>{box.name}</h4></div>
                     <div className="previewWrap">
 
-                      <img className="previewImg" src={"http://localhost:4000/data/img/restaurant/" + content[index][0]._id + "/preview"}/>
+                      <img className="previewImg" src={"https://butlerbird.herokuapp.com/data/img/restaurant/" + content[index][0]._id + "/preview"}/>
                       <p>{box.butlerbirdRestaurant.preview.text}</p>
                     </div>
                     </Link>

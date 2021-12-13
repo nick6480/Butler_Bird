@@ -6,7 +6,7 @@ import { useEffect,  useState} from 'react';
 
 export const fetchCompany = async () => {
 
-    const URL = 'http://butlerbird.herokuapp.com/company/get';
+    const URL = 'https://butlerbird.herokuapp.com/company/get';
 
     const { data } = await axios.get(URL)
 
@@ -18,7 +18,7 @@ export const fetchCompany = async () => {
 
 export const fetchSettings = async () => {
 
-    const URL = 'http://butlerbird.herokuapp.settings/get';
+    const URL = 'https://butlerbird.herokuapp.com/settings/get';
 
     const { data } = await axios.get(URL)
 
@@ -33,7 +33,7 @@ export function FetchContent(query, pageNumber) {
   const [content, setContent] = useState([])
   const [hasMore, setHasMore] = useState(false)
 
-  const URL = 'http://localhost:4000/data/get'
+  const URL = 'https://butlerbird.herokuapp.com/data/get'
 
   useEffect(() => {
     setContent([])
@@ -70,7 +70,7 @@ export function FetchContent(query, pageNumber) {
 
 export const fetchWeather = async () => {
 
-    const URL = 'http://api.openweathermap.org/data/2.5/weather';
+    const URL = 'https://api.openweathermap.org/data/2.5/weather';
     const API_KEY = '61b69314c7b6ccf56a46e34e';
 
     const { data } = await axios.get(URL, {

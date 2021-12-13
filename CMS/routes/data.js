@@ -129,7 +129,7 @@ router.get('/get', function(req, res, next) {
   const id = req.query.id;
   const business = req.query.q
 
-
+  console.log('get');
 
   switch (business) {
     case 'restaurant':

@@ -35,7 +35,7 @@ function Hotel({fetchUrl}) {
             return (
               <div className="categoryWrap">
                 {content.map((categorys, index) => {
-
+                  console.log(content);
                   return (
 
                     <div className="category" id={categorys.category.catid}>
