@@ -1,0 +1,43 @@
+<div class="navWrapper"><nav> <%- include('./partials/nav.ejs') %> </nav></div>
+<div id="main">
+  <h1><%= title %></h1>
+
+  <div>
+    <form action="/activity/update"  method="POST" enctype="multipart/form-data">
+      <h3>Preview</h3>
+      <div class="previewText">
+        <span>Text</span>
+        <textarea name="previewtext" rows="2" cols="80"><%= company.butlerbirdActivity.preview.text%></textarea>
+      </div>
+      <br>
+      <div class="previewImg">
+        <span>Image</span>
+        <input type="file" name="previewimg">
+        <% if(company.butlerbirdRestaurant.preview.img) {%>
+          <img src="/activity/img/preview/<%= company._id %>" alt="The preview image">
+        <%}%>
+
+
+      </div>
+      <br>
+      <div>
+        <h3>Page contents</h3>
+          <div class="pageImg">
+            <span>Image</span>
+            <input type="file" name="pageimg">
+          </div>
+          <div class="pageText">
+            <span>Text</span>
+            <textarea name="pagetext" rows="2" cols="80"></textarea>
+          </div>
+      </div>
+      <input type="submit" value="Save">
+    </form>
+  </div>
+
+</div>
+
+
+ <!--<script src="https://cdn.jsdelivr.net/npm/@simonwep/pickr/dist/pickr.min.js"></script>-->
+
+ <!--<script src="./js/main.js"></script>-->

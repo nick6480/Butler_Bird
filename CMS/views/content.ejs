@@ -1,0 +1,125 @@
+<div class="navWrapper"><nav> <%- include('./partials/nav.ejs') %> </nav></div>
+<div id="main">
+  <h1><%= title %></h1>
+
+
+<div class="contentWrap">
+    <div>
+      <div class="createNewCatWrap">
+        <div id="createNewCat">
+            <span id="catName"> Create new category </span>
+            <button id="catBtn" type="button" name="button">Create</button>
+        </div>
+      </div>
+
+      <div id="catWrap" class="catcontainer container">
+        <% for (var i = 0; i < company.butlerbird.content.categorys.length;  i++ ) { %>
+
+
+          <div id='<%= company.butlerbird.content.categorys[i].category.catid %>' class="catdraggable draggable category" draggable="true">
+
+            <div class="createbox">
+              <h2><%= company.butlerbird.content.categorys[i].category.name %> </h2>
+              <div>
+                <input class="boxname" type="text" name="" value="">
+                <button class="boxnamebtn" type="button" name="button">+</button>
+              </div>
+
+            </div>
+
+            <div class="boxcontainer container">
+              <% for (var o = 0; o < company.butlerbird.content.categorys[i].category.content.length;  o++ ) { %>
+
+                <div id="<%= company.butlerbird.content.categorys[i].category.content[o]._id%>" class="boxdraggable box draggable" draggable="true">
+                  <div class="name">
+                    <h2><%= company.butlerbird.content.categorys[i].category.content[o].name%></h2>
+                    <button class="arrow" type="button" name="button"><img src="/img/arrow.svg" alt="black arrow"></button>
+
+                  </div>
+                  <form class="saveContent" action="/content/update"  method="POST" enctype="multipart/form-data">
+
+                    <div class="settings">
+                      <div>
+                        <h3>Preview</h3>
+                        <div class="previewText">
+                          <span>Text</span>
+                          <textarea name="previewtext" rows="2" cols="80"><%= company.butlerbird.content.categorys[i].category.content[o].preview.text%></textarea>
+                        </div>
+                        <br>
+                        <div class="previewImg">
+                          <span>Image</span>
+                          <input type="file" name="previewimg">
+                          <% if(company.butlerbird.content.categorys[i].category.content[o].preview.img) {%>
+
+                          <%}%>
+
+                        </div>
+                        <br>
+                        <div class="previewStyle">
+                          <h3>Preview Style</h3>
+                          <div class="previewText">
+                            <span>Text alignment</span>
+                            <select name="alignment">
+                              <option value="left">Left</option>
+                              <option value="center">Center</option>
+                              <option value="right">Right</option>
+                            </select>
+                          </div>
+                        </div>
+                        <div>
+                          <h3>Page contents</h3>
+                            <div class="pageImg">
+                              <span>Image</span>
+                              <input type="file" name="pageimg">
+                            </div>
+                            <div class="pageText">
+                              <span>Text</span>
+                              <textarea name="pagetext" rows="2" cols="80"><%= company.butlerbird.content.categorys[i].category.content[o].page.text%></textarea>
+                            </div>
+                        </div>
+
+                        <div>
+                          <h3>Clipboard</h3>
+                          <div class="clipboardText">
+                            <span>Text</span>
+                            <textarea name="name" rows="2" cols="80"></textarea>
+                          </div>
+                        </div>
+
+                      </div>
+
+
+                    </div>
+                    <div class="saveContentBtnWrap">
+                      <button class="saveContent" type="submit">Save</button>
+                    </div>
+                     <input type="hidden" name="catId" value="<%= company.butlerbird.content.categorys[i].category.catid %>">
+                     <input type="hidden" name="boxId" value="<%= company.butlerbird.content.categorys[i].category.content[o]._id %>">
+                  </form>
+
+                </div>
+
+              <% } %>
+            </div>
+
+          </div>
+
+        <% } %>
+      </div>
+    </div>
+
+  <!--  <iframe id="inlineFrameExample"
+    title="Inline Frame Example"
+    width="300"
+    height="500"
+    src="https://jovial-clarke-a9896e.netlify.app/">
+</iframe>-->
+
+  </div>
+
+</div>
+
+
+ <!--<script src="https://cdn.jsdelivr.net/npm/@simonwep/pickr/dist/pickr.min.js"></script>-->
+ <script src="./js/content.js"></script>
+ <!--<script src="./js/main.js"></script>-->

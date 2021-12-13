@@ -1,0 +1,89 @@
+<div class="navWrapper"><nav> <%- include('./partials/nav.ejs') %> </nav></div>
+<div id="main">
+  <h1><%= title %></h1>
+
+
+  <div class="setup">
+    <h2> Setup of Butlerbird </h2>
+    <div>
+      <h3>Domain name</h3>
+      <input id="url" type="text" name="url" value="<%= data.domain %>" placeholder="example.com">
+      <button id="urlBtn" type="button" name="button">Save</button>
+    </div>
+  </div>
+
+  <div class="userswrap">
+    <div>
+        <h2> Users </h2>
+        <button id="catBtn" type="button" name="button">Create</button>
+    </div>
+
+    <div class="grid">
+
+        <div class="row">
+          <div class="column column-label">
+            <h5>Name</h5>
+          </div>
+          <% for(var i = 0; i < users.length; i++) {%>
+            <div class="column user-name">
+
+              <span><%= users[i].name %></span>
+
+            </div>
+          <% } %>
+        </div>
+
+        <div class="row">
+          <div class="column column-label">
+            <h5>E-mail</h5>
+          </div>
+          <% for(var i = 0; i < users.length; i++) {%>
+            <div class="column user-email">
+
+              <span><%= users[i].email %></span>
+
+            </div>
+          <% } %>
+        </div>
+
+        <div class="row">
+          <div class="column column-label">
+            <h5>Phone Nr.</h5>
+          </div>
+          <% for(var i = 0; i < users.length; i++) {%>
+            <div class="column user-tlf">
+
+              <span><%= users[i].tlf %></span>
+
+            </div>
+          <% } %>
+        </div>
+
+        <div class="row">
+          <div class="column column-label">
+            <h5>Role</h5>
+          </div>
+          <% for(var i = 0; i < users.length; i++) {%>
+            <div class="column user-role">
+
+              <span><%= users[i].role %></span>
+
+            </div>
+          <% } %>
+        </div>
+
+        <div class="editUserBtn">
+          <button type="button" name="button">Edit</button>
+        </div>
+        </div>
+
+    </div>
+  </div>
+
+
+
+<script src="./js/admin.js"></script>
+
+
+
+</div>

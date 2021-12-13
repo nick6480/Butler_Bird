@@ -1,0 +1,191 @@
+
+.contentWrap {
+  display: flex;
+  justify-content: row;
+}
+
+
+.contentWrap > div{
+  width: 50%;
+}
+
+
+
+.createNewCatWrap {
+  width: 100% - 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+
+
+
+#createNewCat {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100% - 20px;
+  margin: 10px;
+  padding: 20px;
+  background-color: LightGray;
+  border-radius: 10px;
+}
+
+
+
+
+#saveNewCat {
+  display: none;
+}
+
+.category {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+  padding: 20px;
+  width: 100% - 20px;
+  background-color: #DDDBDB;
+  border-radius: 10px;
+
+
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
+
+.createbox {
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+}
+
+.createbox div:first-of-type {
+  display: flex;
+  align-items: center;
+}
+
+.createbox div:first-of-type button{
+  margin-left: 20px;
+}
+
+
+
+.box {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+
+  /*border: 20px solid transparent;*/
+  width: 100% - 20px;
+  background-color: white;
+  border-radius: 10px;
+  cursor: default;
+}
+
+
+.box .name{
+
+  border: 20px solid transparent;
+  border-radius: 10px 10px 0 0;
+  display: flex;
+  justify-content: space-between;
+
+  box-shadow: 0px 5px 25px 0px rgba(61,61,61,0.25);
+  -webkit-box-shadow: 0px 5px 25px 0px rgba(61,61,61,0.25);
+  -moz-box-shadow: 0px 5px 25px 0px rgba(61,61,61,0.25);
+}
+
+.box .settings {
+  border: 20px solid transparent;
+}
+
+.box h2{
+
+}
+
+
+.box h3{
+  margin: 10px 5px 2px;
+}
+
+.box h4{
+  margin: 10px
+}
+
+.box span{
+  margin: 0 10px;
+
+}
+
+.box input {
+  margin: 10px 0px;
+}
+
+.box textarea {
+  -webkit-box-shadow: inset 1px 1px 13px 1px rgba(103,103,103,0.4);
+  box-shadow: inset 1px 1px 13px 1px rgba(103,103,103,0.4);
+  border-radius: 5px;
+  padding: 10px
+}
+
+.box .text {
+  -webkit-box-shadow: inset 1px 1px 13px 1px rgba(103,103,103,0.4);
+  box-shadow: inset 1px 1px 13px 1px rgba(103,103,103,0.4);
+  border-radius: 5px;
+  padding: 10px
+}
+
+
+.box .cta  {
+  display: none
+}
+
+
+.box .cta span {
+  margin: 10px 20px;
+}
+
+
+
+.boxcontainer {
+
+}
+
+.saveContentBtnWrap{
+  width: 100%;
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.saveContent{
+  margin: 10px;
+  display: block; //CHANGE
+}
+
+
+.draggable {
+  cursor: move;
+}
+
+.boxdraggable {
+  cursor: pointer;
+}
+
+.draggable.dragging {
+  opacity: .5;
+}
+
+
+.settings {
+
+  cursor: default;
+}
+
+.settings .previewText, .pageText, .clipboardText{
+  display: flex;
+  margin: 10px 0;
+}

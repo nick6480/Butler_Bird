@@ -1,0 +1,190 @@
+*{
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+body {
+
+}
+
+main {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+main #main {
+  width: 100%;
+  margin-top: 50px;
+
+}
+
+h1 {
+  padding: 20px;
+  font-size: 30px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+}
+
+h2 {
+  font-size: 30px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+}
+
+h3 {
+  font-size: 18px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+}
+
+h4 {
+  font-size: 16px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+}
+
+p {
+  font-size: 12px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+}
+
+img {
+  max-width: 200px;
+}
+
+span {
+  font-size: 16px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  te
+}
+
+button {
+    padding: 10px;
+    width: 100px;
+    background-color: #273b5a;
+    border-radius: 5px;
+    color: white;
+    box-shadow: 1px 2px 3px 1px rgba(0,0,0,0.24);
+    -webkit-box-shadow: 1px 2px 3px 1px rgba(0,0,0,0.24);
+    -moz-box-shadow:1px 2px 3px 1px rgba(0,0,0,0.24);
+  }
+
+  button:hover,
+  button:focus {
+    background-color: #1a283d;
+  }
+
+
+  input[type='text'], input[type='password'], input[type='email'] {
+
+    background: #fff;
+    color: #525865;
+    border-radius: 5px;
+    box-shadow: inset 1px 2px 8px rgba(0, 0, 0, 0.07);
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    outline: none;
+    text-align: left;
+    padding: 0.6em 1.45em 0.7em;
+    -webkit-transition: .18s ease-out;
+    -moz-transition: .18s ease-out;
+    -o-transition: .18s ease-out;
+    transition: .18s ease-out;
+  }
+  input:hover {
+    box-shadow: inset 1px 2px 8px rgba(0, 0, 0, 0.02);
+  }
+  input:focus {
+    color: #4b515d;
+    box-shadow: inset 1px 2px 4px rgba(0, 0, 0, 0.01), 0px 0px 8px rgba(0, 0, 0, 0.2);
+  }
+
+
+/* NAV */
+.navWrapper {
+  display: flex;
+}
+
+.navWrap {
+  position: fixed;
+  margin-top: 50px;
+}
+
+nav {
+  padding: 20px;
+  background-color: #1a283d;
+  min-height: 100vw;
+  height: 100%;
+  width: 100px;
+}
+
+nav ul{
+  list-style-type: none;
+}
+
+nav ul li {
+  margin: 10px 0;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+}
+
+
+nav ul li a:hover{
+  color: #476aa1;
+}
+
+
+nav img{
+  width: 80px;
+}
+
+nav p {
+  color: white;
+  font-size: 20px;
+}
+
+
+.logoWrap {
+  display: flex;
+  flex-direction: column;
+
+  margin-bottom: 40px;
+}
+
+
+
+
+/* Diverse */
+
+
+.arrow {
+    padding: 0;
+    width: auto;
+    background-color: transparent;
+    border-radius: 0;
+    box-shadow: 0 0 0 0 rgba(0,0,0,0.0);
+    -webkit-box-shadow: 0 0 0 0 rgba(0,0,0,0.0);
+    -moz-box-shadow:0 0 0 0 0 rgba(0,0,0,0.0);
+  }
+
+  .arrow:hover,
+  .arrow:focus {
+    background-color: transparent;
+  }
+
+
+.arrow img {
+  width: 30px;
+}

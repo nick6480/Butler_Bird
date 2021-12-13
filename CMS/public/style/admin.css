@@ -1,0 +1,42 @@
+.userswrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100% - 20px;
+  padding: 20px 40px;
+  background-color: LightGray;
+}
+
+
+
+.grid {
+  display: flex;
+  flex-direction: row;
+}
+
+.row {
+  width: 50%;
+}
+
+
+
+.column {
+  display: flex;
+  justify-content: center;
+
+  background-color:#bbb;
+}
+
+.column-label {
+  background-color:#aaa;
+}
+
+.editUserBtn {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.user-role span, .user-name span {
+  text-transform: capitalize;
+}

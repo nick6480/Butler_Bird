@@ -1,0 +1,85 @@
+.loginFormWrap {
+  width: 100%;
+  min-height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.loginForm {
+  /*height: 200px;*/
+  display: flex;
+  min-height: 100%;
+  border-radius: 10px;
+  box-shadow: 3px 4px 5px 1px rgba(0,0,0,0.24);
+  -webkit-box-shadow: 3px 4px 5px 2px rgba(0,0,0,0.24);
+  -moz-box-shadow: 3px 4px 5px 2px rgba(0,0,0,0.24);
+  padding: 30px;
+width: 500px;
+}
+
+
+
+.loginForm form {
+  display: flex;
+  flex-direction: column;
+
+
+}
+
+.loginForm form div input{
+  margin: 10px 0;
+  height: 34px;
+  width: 90%;
+  border-radius: 5px;
+  border: 1px solid transparent;
+  border-top: none;
+  border-bottom: 1px solid #DDD;
+  box-shadow: inset 0 1px 2px rgba(0,0,0,.39), 0 -1px 1px #FFF, 0 1px 0 #FFF;
+}
+
+
+
+
+/* Register */
+
+
+
+.businessTypeRadio {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.businessTypeRadio div{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.businessTypeRadio span{
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+
+}
+
+#hotelType,  #restaurantType, #activityType{
+  box-shadow: inset 0 0 0 rgba(0,0,0,0), 0 0 0  white, 0 0 0 white;
+  width: 20px;
+  margin: 0 20px 0 0;
+}
+
+.types {
+  display: none;
+  flex-direction: column;
+  width: 100%;
+}
+
+
+
+#businessType{
+  display: flex;
+}

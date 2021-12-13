@@ -1,0 +1,65 @@
+<div id="main">
+    <div class="loginFormWrap">
+      <div class="loginForm registerForm">
+        <form class="" action="/register" method="post">
+          <div class="types" id="businessType">
+            <p>Please select your business</p>
+            <div class="businessTypeRadio">
+              <div>
+                <span>
+                  <input type="radio" id="hotelType" name="businesstype" value="hotel" required/>
+                  <label for="hotelType">Hotel</label>
+                </span>
+              </div>
+              <div>
+                <span>
+                  <input type="radio" id="restaurantType" name="businesstype" value="restaurant" />
+                  <label for="restaurantType">Restaurant</label>
+                </span>
+              </div>
+              <div>
+                <span>
+                  <input type="radio" id="activityType" name="businesstype" value="activity" />
+                  <label for="activityType">Activities and attractions</label>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="types" id="companyInfo">
+            <p>Please fill in the your company details</p>
+            <div class="">
+              <input type="text" name="companyname" value="" placeholder="Company name" required>
+              <input type="text" name="address" value="" placeholder="Address" required>
+              <input type="text" name="city" value="" placeholder="City" required>
+              <input type="text" name="country" value="" placeholder="Country" required>
+            </div>
+          </div>
+          <div class="types" id="adminUser">
+            <p>Create your admin user, you can add more users in the admin panel if needed</p>
+            <div>
+              <input type="text" name="name" value="" placeholder="Name" required>
+              <input type="password" name="password" value="" placeholder="Password" required>
+              <input type="email" name="email" value="" placeholder="Email" required>
+              <input type="text" name="tlf" value="" placeholder="Tlf. with country nr." required>
+            </div>
+          </div>
+          <div class="types" id="payment">
+            <p>Payment plan</p>
+          </div>
+          <div class="pages">
+            <div>
+                <span id="pageNr">1</span><span> of </span><span id="maxPageNr"></span>
+            </div>
+            <div>
+              <button id="previous" class="next" type="button" form="myform" >Previous</button>
+              <button id="next" class="next" type="button">Next</button>
+            </div>
+
+          </div>
+
+        </form>
+      </div>
+    </div>
+  </div>
+
+<script src="./js/login.js"></script>
