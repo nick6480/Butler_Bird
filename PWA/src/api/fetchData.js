@@ -33,8 +33,8 @@ export function FetchContent(query, pageNumber) {
   const [content, setContent] = useState([])
   const [hasMore, setHasMore] = useState(false)
 
-  //const URL = 'https://butlerbird.herokuapp.com/data/get'
-  const URL = 'http://localhost:4000/data/get'
+  const URL = 'https://butlerbird.herokuapp.com/data/get'
+  //const URL = 'http://localhost:4000/data/get'
 
 
   useEffect(() => {
