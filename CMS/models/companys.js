@@ -89,7 +89,10 @@ butlerbird : {
 },
 butlerbirdRestaurant: {
   preview: {
+    subheading: String,
     text: String,
+    align: String,
+    overlay: String,
     img: {
       data: Buffer,
       contentType: String

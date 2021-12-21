@@ -5,20 +5,39 @@
   <div>
     <form action="/restaurant/update"  method="POST" enctype="multipart/form-data">
       <h3>Preview</h3>
+      <div class="previewSubHeading">
+        <span>Sub heading</span>
+        <input type="text" name="previewsubheading" value="<%= company.butlerbirdRestaurant.preview.subheading%>">
+      </div>
+      <br>
       <div class="previewText">
         <span>Text</span>
         <textarea name="previewtext" rows="2" cols="80"><%= company.butlerbirdRestaurant.preview.text%></textarea>
       </div>
+      <div class="previewAlign">
+        <span>Text align</span>
+        <select name="previewalign">
+          <option value="left">Left</option>
+          <option value="center">Center</option>
+          <option value="right">Right</option>
+        </select>
+      </div>
       <br>
-      <div class="previewImg">
+      <div class="previewImgWrap">
         <span>Image</span>
         <input type="file" name="previewimg">
-        <% if(company.butlerbirdRestaurant.preview.img) {%>
-          <img src="/restaurant/img/preview/<%= company._id %>" alt="The preview image">
-        <%}%>
+        <div class="previewImg">
+            <img src="/restaurant/img/preview/<%= company._id %>" alt="The preview image">
+            <div class="previewOverlay" style="background-color:<%= company.butlerbirdRestaurant.preview.overlay%>"></div>
+        </div>
+        <input class="previewOverlayInput" type="hidden" name="previewoverlay" value="<%= company.butlerbirdRestaurant.preview.overlay%>">
 
-
+      <div>
+        <span>Overlay</span>
+        <div class="color-picker"></div>
       </div>
+      </div>
+
       <br>
       <div>
         <h3>Page contents</h3>
@@ -38,6 +57,7 @@
 </div>
 
 
- <!--<script src="https://cdn.jsdelivr.net/npm/@simonwep/pickr/dist/pickr.min.js"></script>-->
 
- <!--<script src="./js/main.js"></script>-->
+<script src="https://cdn.jsdelivr.net/npm/@simonwep/pickr/dist/pickr.min.js"></script>
+
+ <script src="./js/pickr.js"></script>

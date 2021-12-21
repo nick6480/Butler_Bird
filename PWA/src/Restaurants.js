@@ -52,11 +52,16 @@ function Restaurants({fetchUrl}) {
                 return (
                   <div className="contentBox" id={box.name} >
                   <Link to={`/restaurant/${content[index][0].name}`}>
-                    <div><h4>{box.name}</h4></div>
                     <div className="previewWrap">
+                      <img className="previewImg" src={"http://localhost:4000/data/img/restaurant/" + content[index][0]._id + "/preview"}/>
 
-                      <img className="previewImg" src={"https://butlerbird.herokuapp.com/data/img/restaurant/" + content[index][0]._id + "/preview"}/>
-                      <p>{box.butlerbirdRestaurant.preview.text}</p>
+                      <div style={{textAlign: box.butlerbirdRestaurant.preview.align, backgroundColor: box.butlerbirdRestaurant.preview.overlay}} className="previewText">
+                        <h4>{box.name}</h4>
+                        <pre className="previewSubHeading">{box.butlerbirdRestaurant.preview.subheading}</pre>
+                        <pre className="previewSubText">{box.butlerbirdRestaurant.preview.text}</pre>
+                      </div>
+
+
                     </div>
                     </Link>
                   </div>

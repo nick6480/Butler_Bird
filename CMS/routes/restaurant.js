@@ -36,14 +36,22 @@ router.post('/update', async function(req, res, next) {
   console.log(req.user.company);
   form.parse(req, async function(err, fields, files) {
     if (err) {console.error(err);}
-    console.log("ASDASD");
+    console.log(fields.previewoverlay);
       Company.findOne({_id: req.user.company}, async function (err, company) {
         console.log('found it ' + company);
 
         // Preview
+        company.butlerbirdRestaurant.preview.subheading = fields.previewsubheading
         company.butlerbirdRestaurant.preview.text = fields.previewtext
-        company.butlerbirdRestaurant.preview.img.data = await fs.readFileSync(files.previewimg.filepath);
-        company.butlerbirdRestaurant.preview.img.contentType = files.previewimg.mimetype;
+        company.butlerbirdRestaurant.preview.align = fields.previewalign
+        company.butlerbirdRestaurant.preview.overlay = fields.previewoverlay
+
+
+        if (files.previewimg.mimetype.includes('image')) {
+          company.butlerbirdRestaurant.preview.img.data = await fs.readFileSync(files.previewimg.filepath);
+          company.butlerbirdRestaurant.preview.img.contentType = files.previewimg.mimetype;
+        }
+
 
         // Page
         company.butlerbirdRestaurant.page.text = fields.pagetext
@@ -65,7 +73,6 @@ router.post('/update', async function(req, res, next) {
 
 router.get('/img/:type/:id', function(req, res, next) { // Displays images on node app
 
-  console.log("ASDSA");
 
   Company.findOne({_id: req.params.id}, function (err, company) {
     if (req.params.type == 'preview') {
